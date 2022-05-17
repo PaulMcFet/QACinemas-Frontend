@@ -1,3 +1,7 @@
 .bg-customGrey {
   background-color: rgb(78, 78, 78);
 }
+
+#logo {
+  margin: 0rem 2rem 0rem 2rem;
+}
