@@ -4,13 +4,14 @@ import Navbar from "./components/Nav/Navbar";
 import React from "react";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
+import New from "./components/What's New/New"
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
-
+      {/* <Home /> */}
+      <New />
       <Footer />
     </div>
   );
