@@ -6,12 +6,13 @@ import HQ from "../../Assets/qa-hq.jpg";
 import Image from "react-bootstrap/Image";
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import "./about.css"
 
 const About = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Container>
+    <Container style={{minHeight: "100vh"}}>
       <Row>
         <h1 className="text-center">About Us!</h1>
         <Col className="mb-5 mt-5">

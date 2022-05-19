@@ -12,7 +12,7 @@ import Form from "react-bootstrap/Form";
 
 const Bookings = () => {
   return (
-    <Container fluid className="align-content-center">
+    <Container style={{minHeight: "100vh"}} fluid className="align-content-center">
       <Row className="text-center">
         <Col>
           <h1>Bookings</h1>

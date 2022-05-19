@@ -56,7 +56,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/explore/about"
+            path="/about"
             element={
               <>
                 <Navbar />

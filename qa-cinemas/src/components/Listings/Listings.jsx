@@ -14,7 +14,7 @@ const Listings = () => {
   function loadMovies() {}
 
   return (
-    <Container>
+    <Container style={{minHeight: "100vh"}}>
       <Row>
         <h1>Take a look at what's on!</h1>
       </Row>
