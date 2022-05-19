@@ -12,18 +12,24 @@ import Form from "react-bootstrap/Form";
 
 const Bookings = () => {
   return (
-    <Container fluid>
+    <Container fluid className="align-content-center">
       <Row className="text-center">
         <Col>
           <h1>Bookings</h1>
         </Col>
       </Row>
-      <Row md={4}>
-        <Col>
-          <Image fluid src={Seats} />
+      <Row>
+        <Col
+          style={{ display: "flex" }}
+          className="align-items-center justify-content-center ms-4 ps-4"
+        >
+          <Image fluid roundedCircle src={Seats} />
         </Col>
-        <Col xs={6} className="text-center">
-          <Card style={{ width: "18rem" }}>
+        <Col
+          style={{ display: "flex" }}
+          className="text-center align-items-center justify-content-center"
+        >
+          <Card style={{ width: "24rem" }}>
             <Card.Body>
               <Card.Title className="text-center">Basket:</Card.Title>
               <Card.Subtitle className="mb-3 mt-3 text-center">
@@ -60,13 +66,6 @@ const Bookings = () => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Text>
-              <Card.Link
-                className="bg-dark"
-                style={{ color: "white" }}
-                href="#"
-              >
-                Card Link
-              </Card.Link>
               <Button variant="dark">Add</Button>{" "}
             </Card.Body>
           </Card>
@@ -77,19 +76,33 @@ const Bookings = () => {
             <Col>
               <Form>
                 <Form.Group className="mb-3" controlId="formAccountNumber">
-                  <Form.Label>Account Number</Form.Label>
-                  <Form.Control type="account" placeholder="Enter account number" />
+                  <Form.Label>Account:</Form.Label>
+                  <Form.Control
+                    type="account"
+                    placeholder="Enter account number"
+                  />
                 </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                <Form.Group className="mb-3" controlId="formSortNumber">
+                  <Form.Label>Sort:</Form.Label>
+                  <Form.Control type="sort" placeholder="Enter sort number" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
+                <Form.Group className="mb-3" controlId="formAccountNumber">
+                  <Form.Label>Phone Number:</Form.Label>
+                  <Form.Control type="phone" placeholder="Enter phone number" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
-                  Submit
+                <Form.Group className="mb-3" controlId="formAccountNumber">
+                  <Form.Label>Email Address:</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter email address"
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formAccountNumber">
+                  <Form.Label>Full Name:</Form.Label>
+                  <Form.Control type="name" placeholder="Enter full name" />
+                </Form.Group>
+                <Button variant="dark" type="submit">
+                  Purchase
                 </Button>
               </Form>
             </Col>
