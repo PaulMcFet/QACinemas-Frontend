@@ -8,6 +8,7 @@ import New from "./components/What's New/New";
 import Bookings from "./components/Bookings/Bookings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Listings from "./components/Listings/Listings";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -50,6 +51,16 @@ function App() {
               <>
                 <Navbar />
                 <Bookings />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/explore/about"
+            element={
+              <>
+                <Navbar />
+                <About />
                 <Footer />
               </>
             }
