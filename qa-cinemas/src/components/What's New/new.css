@@ -6,5 +6,6 @@ html,
 }
 
 .poster {
-  margin: 10px 10px 10px 10px;
+  height: 40%;
+  width: 30%;
 }
