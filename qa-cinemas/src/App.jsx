@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import New from "./components/What's New/New";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Listings from "./components/Listings/Listings"
+import Listings from "./components/Listings/Listings";
 
 function App() {
   return (
