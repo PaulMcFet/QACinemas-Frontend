@@ -9,6 +9,7 @@ import Bookings from "./components/Bookings/Bookings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Listings from "./components/Listings/Listings";
 import About from "./components/About/About";
+import "@stripe/stripe-js";
 
 function App() {
   return (

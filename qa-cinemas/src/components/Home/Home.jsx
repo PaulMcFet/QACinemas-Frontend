@@ -3,7 +3,6 @@ import Carousel from "react-bootstrap/Carousel";
 import Scott from "../../Assets/SPVSTW.jpeg";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import "./home.css";
 import Row from "react-bootstrap/Row";
 import Thor from "../../Assets/ThorR.jpg";
 import Gent from "../../Assets/TheG.jpg";
@@ -12,21 +11,21 @@ import Image from "react-bootstrap/Image";
 
 const Home = () => {
   return (
-    <Container style={{ minHeight: "100vh" }}>
+    <Container>
       <Row md={2}>
         <Col lg>
           <Carousel fade>
             <Carousel.Item interval={5000}>
-              <Image className="d-block poster" src={Scott} alt="First slide" />
+              <Image className="d-block" src={Scott} alt="First slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <Image className="d-block poster" src={Thor} alt="Second slide" />
+              <Image className="d-block" src={Thor} alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <Image className="d-block poster" src={Gent} alt="Third slide" />
+              <Image className="d-block" src={Gent} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <Image className="d-block poster" src={Int} alt="Fourth slide" />
+              <Image className="d-block" src={Int} alt="Fourth slide" />
             </Carousel.Item>
           </Carousel>
         </Col>

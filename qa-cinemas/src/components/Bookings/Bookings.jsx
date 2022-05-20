@@ -9,8 +9,39 @@ import Dropdown from "react-bootstrap/Dropdown";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { loadStripe } from "@stripe/stripe-js";
+
+let stripePromise;
+
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+  }
+  return stripePromise;
+}
+
 
 const Bookings = () => {
+
+  const item = {
+    price: "price_1L1R8fHlqn4NU7FiMzAuqhme",
+    quantity: 1
+  }
+
+  const checkoutOptions = {
+    lineItems: [item],
+    mode: "payment",
+    successUrl: `${window.location.origin}/success`,
+    cancelUrl: `${window.location.origin}/cancel`,
+  }
+
+  const redirectToCheckout = async () => {
+    console.log("redirectToCheckout")
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout(checkoutOptions);
+    console.log("Stripe checkout error", error);
+  }
+
   return (
     <Container style={{minHeight: "100vh"}} fluid className="align-content-center">
       <Row className="text-center">
@@ -66,7 +97,7 @@ const Bookings = () => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Text>
-              <Button variant="dark">Add</Button>{" "}
+              <Button className="checkout-button" variant="dark" onClick={redirectToCheckout}>Checkout</Button>{" "}
             </Card.Body>
           </Card>
         </Col>
