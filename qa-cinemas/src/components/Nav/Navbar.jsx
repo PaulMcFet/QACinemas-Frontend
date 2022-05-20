@@ -24,18 +24,6 @@ export default function NavbarComponent() {
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="container-fluid">
-        <Nav.Item>
-            <Form className="d-flex">
-              <FormControl
-                id="search"
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-secondary">Search</Button>
-            </Form>
-          </Nav.Item>
           <NavDropdown title="Explore">
             <NavDropdown.Item href="explore/about">About Us</NavDropdown.Item>
             <NavDropdown.Item href="contact">Contact</NavDropdown.Item>
@@ -51,6 +39,18 @@ export default function NavbarComponent() {
           <Nav.Link href="new">What's New?</Nav.Link>
           <Nav.Link href="listings">Listings</Nav.Link>
           <Nav.Link href="bookings">Bookings</Nav.Link>
+          <Nav.Item className ="ms-auto">
+            <Form className="d-flex">
+              <FormControl
+                id="search"
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-secondary">Search</Button>
+            </Form>
+          </Nav.Item>
           <Nav.Item className="ms-auto">
             <Button bg="dark" variant="dark" onClick={() => setModalShow(true)}>
               Sign in/Register
