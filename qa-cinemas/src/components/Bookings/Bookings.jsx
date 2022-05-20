@@ -10,6 +10,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { loadStripe } from "@stripe/stripe-js";
+import { useState } from "react";
 
 let stripePromise;
 
@@ -18,32 +19,45 @@ const getStripe = () => {
     stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
   }
   return stripePromise;
-}
-
+};
 
 const Bookings = () => {
+  const [stripeError, setStripeError] = useState(null);
+  const [isLoading, setLoading] = useState(false);
 
   const item = {
     price: "price_1L1R8fHlqn4NU7FiMzAuqhme",
-    quantity: 1
-  }
+    quantity: 1,
+  };
 
   const checkoutOptions = {
     lineItems: [item],
     mode: "payment",
     successUrl: `${window.location.origin}/success`,
     cancelUrl: `${window.location.origin}/cancel`,
-  }
+  };
 
   const redirectToCheckout = async () => {
-    console.log("redirectToCheckout")
+    setLoading(true);
+    console.log("redirectToCheckout");
     const stripe = await getStripe();
     const { error } = await stripe.redirectToCheckout(checkoutOptions);
     console.log("Stripe checkout error", error);
+
+    if (error) setStripeError(error.message);
+    setLoading(false);
+  };
+
+  if (stripeError) {
+    alert(stripeError);
   }
 
   return (
-    <Container style={{minHeight: "100vh"}} fluid className="align-content-center">
+    <Container
+      style={{ minHeight: "100vh" }}
+      fluid
+      className="align-content-center"
+    >
       <Row className="text-center">
         <Col>
           <h1>Bookings</h1>
@@ -97,47 +111,16 @@ const Bookings = () => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Text>
-              <Button className="checkout-button" variant="dark" onClick={redirectToCheckout}>Checkout</Button>{" "}
+              <Button
+                className="checkout-button"
+                variant="dark"
+                onClick={redirectToCheckout}
+                disabled={isLoading}
+              >
+                {isLoading ? "Loading..." : "Checkout"}
+              </Button>{" "}
             </Card.Body>
           </Card>
-        </Col>
-        <Col>
-          <h1>Payment</h1>
-          <Row>
-            <Col>
-              <Form>
-                <Form.Group className="mb-3" controlId="formAccountNumber">
-                  <Form.Label>Account:</Form.Label>
-                  <Form.Control
-                    type="account"
-                    placeholder="Enter account number"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formSortNumber">
-                  <Form.Label>Sort:</Form.Label>
-                  <Form.Control type="sort" placeholder="Enter sort number" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formAccountNumber">
-                  <Form.Label>Phone Number:</Form.Label>
-                  <Form.Control type="phone" placeholder="Enter phone number" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formAccountNumber">
-                  <Form.Label>Email Address:</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="Enter email address"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formAccountNumber">
-                  <Form.Label>Full Name:</Form.Label>
-                  <Form.Control type="name" placeholder="Enter full name" />
-                </Form.Group>
-                <Button variant="dark" type="submit">
-                  Purchase
-                </Button>
-              </Form>
-            </Col>
-          </Row>
         </Col>
       </Row>
     </Container>
