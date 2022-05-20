@@ -1,5 +1,5 @@
 import React from "react";
-import { BsGithub, BsTwitter } from "react-icons/bs";
+import { BsAlignMiddle, BsGithub, BsTwitter } from "react-icons/bs";
 import Logo from "../../Assets/qa-company.png";
 import "./footer.css";
 
@@ -34,14 +34,11 @@ const Footer = () => {
         </a>
       </section>
       <section className="footer-info">
-        <section className="footer-info-left">Tel: 07850396398</section>
+        <section className="footer-info-start">Tel: 07850396398</section>
         <section className="footer-info-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          deleniti ex optio laudantium voluptas atque, consectetur consequuntur
-          obcaecati! Rerum ut iure quis omnis cupiditate corrupti et impedit in
-          corporis voluptatem.
-        </section>
-        <section className="footer-info-right">
+       International House, 1 St Katharine’s Way, London, E1W 1UN
+      </section>
+        <section className="footer-info-end">
           <ul>
             <li>One</li>
             <li>Two</li>
@@ -50,8 +47,7 @@ const Footer = () => {
       </section>
       <section className="footer-info-bottom">
         <section className="footer-copy">
-          @QACinemas Limited 1995 to 2022. All rights reserved - International
-          House, 1 St Katharine’s Way, London, E1W 1UN
+            @QACinemas Limited 1995 to 2022. All rights reserved - International 
         </section>
       </section>
       <hr className="footer-seperator" />

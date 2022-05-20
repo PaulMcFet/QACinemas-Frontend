@@ -26,7 +26,7 @@ export default function NavbarComponent() {
       <Navbar.Collapse>
         <Nav className="container-fluid">
           <NavDropdown title="Explore">
-            <NavDropdown.Item href="explore/about">About Us</NavDropdown.Item>
+            <NavDropdown.Item href="about">About Us</NavDropdown.Item>
             <NavDropdown.Item href="contact">Contact</NavDropdown.Item>
             <NavDropdown.Item href="directions">Directions</NavDropdown.Item>
             <NavDropdown.Item href="opening-hours">
@@ -36,7 +36,7 @@ export default function NavbarComponent() {
               Classifications
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="new">What's New?</Nav.Link>
           <Nav.Link href="listings">Listings</Nav.Link>
           <Nav.Link href="bookings">Bookings</Nav.Link>
