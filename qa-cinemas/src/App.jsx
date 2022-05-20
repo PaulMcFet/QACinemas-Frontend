@@ -5,6 +5,7 @@ import React from "react";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import New from "./components/What's New/New";
+import Bookings from "./components/Bookings/Bookings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Listings from "./components/Listings/Listings";
 
@@ -39,6 +40,16 @@ function App() {
               <>
                 <Navbar />
                 <Listings />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/bookings"
+            element={
+              <>
+                <Navbar />
+                <Bookings />
                 <Footer />
               </>
             }
