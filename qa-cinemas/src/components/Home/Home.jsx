@@ -3,11 +3,11 @@ import Carousel from "react-bootstrap/Carousel";
 import Scott from "../../Assets/SPVSTW.jpeg";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import "./home.css";
 import Row from "react-bootstrap/Row";
 import Thor from "../../Assets/ThorR.jpg";
 import Gent from "../../Assets/TheG.jpg";
 import Int from "../../Assets/InterS.jpg";
+import Image from "react-bootstrap/Image";
 
 const Home = () => {
   return (
@@ -29,10 +29,8 @@ const Home = () => {
             </Carousel.Item>
           </Carousel>
         </Col>
-        <Col >
-          <h1>
-            Welcome to QA Cinemas, home of great talent and great views!
-          </h1>
+        <Col>
+          <h1>Welcome to QA Cinemas, home of great talent and great views!</h1>
           <p className="info">
             Established in 2022 and situated directly across from the <a href="https://www.hrp.org.uk/tower-of-london/#gs.0n9x4s"><u> Tower of London</u></a>, this
             bespoke, budget friendly Cinematic experience boasts the 

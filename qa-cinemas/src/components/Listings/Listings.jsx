@@ -8,13 +8,12 @@ import Strange from "../../Assets/strange.jpg";
 import Six from "../../Assets/6.jpg";
 import Fantastic from "../../Assets/fantastic-beasts.jpg";
 import Jumanji from "../../Assets/jumanji.jpg";
-import { useEffect } from "react";
+
 
 const Listings = () => {
-  function loadMovies() {}
 
   return (
-    <Container>
+    <Container style={{minHeight: "100vh"}}>
       <Row>
         <h1>Take a look at what's on!</h1>
       </Row>

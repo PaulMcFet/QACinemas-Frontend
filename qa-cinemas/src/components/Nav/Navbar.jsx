@@ -26,7 +26,7 @@ export default function NavbarComponent() {
       <Navbar.Collapse>
         <Nav className="container-fluid">
           <NavDropdown title="Explore">
-            <NavDropdown.Item href="explore/about">About Us</NavDropdown.Item>
+            <NavDropdown.Item href="about">About Us</NavDropdown.Item>
             <NavDropdown.Item href="contact">Contact</NavDropdown.Item>
             <NavDropdown.Item href="directions">Directions</NavDropdown.Item>
             <NavDropdown.Item href="opening-hours">

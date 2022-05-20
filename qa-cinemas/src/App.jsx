@@ -8,6 +8,10 @@ import New from "./components/What's New/New";
 import Bookings from "./components/Bookings/Bookings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Listings from "./components/Listings/Listings";
+import About from "./components/About/About";
+import "@stripe/stripe-js";
+import Success from "./components/Bookings/Success"
+import Cancel from "./components/Bookings/Cancel"
 
 function App() {
   return (
@@ -50,6 +54,36 @@ function App() {
               <>
                 <Navbar />
                 <Bookings />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/success"
+            element={
+              <>
+                <Navbar />
+                <Success />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/cancel"
+            element={
+              <>
+                <Navbar />
+                <Cancel />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/about"
+            element={
+              <>
+                <Navbar />
+                <About />
                 <Footer />
               </>
             }
