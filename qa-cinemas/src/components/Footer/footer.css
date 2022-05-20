@@ -38,7 +38,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 26, 255);
 }
 
 .footer-info {

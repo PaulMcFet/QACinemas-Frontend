@@ -16,16 +16,16 @@ const Home = () => {
         <Col lg>
           <Carousel fade>
             <Carousel.Item interval={5000}>
-              <img className="d-block poster" src={Scott} alt="First slide" />
+              <img className="d-blockposter" src={Scott} alt="First slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <img className="d-block poster" src={Thor} alt="Second slide" />
+              <img className="d-blockposter" src={Thor} alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <img className="d-block poster" src={Gent} alt="Third slide" />
+              <img className="d-blockposter" src={Gent} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <img className="d-block poster" src={Int} alt="Fourth slide" />
+              <img className="d-blockposter" src={Int} alt="Fourth slide" />
             </Carousel.Item>
           </Carousel>
         </Col>
@@ -34,20 +34,12 @@ const Home = () => {
             Welcome to QA Cinemas, home of great talent and great views!
           </h1>
           <p className="info">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
-            ipsum vitae, enim alias quisquam repudiandae deserunt ad. Repellat
-            sunt doloribus eaque dolore rem tempore amet quis quia, sapiente,
-            eum tenetur? Incidunt, excepturi ab. Officiis ducimus natus illo ut
-            ullam porro labore hic adipisci libero debitis voluptate rerum autem
-            quae iure in unde molestiae, maiores minus reprehenderit sint
-            numquam? Consectetur, temporibus. Iste dicta similique vitae libero
-            maxime distinctio reprehenderit recusandae odio nihil ad, dolores
-            vero aspernatur laudantium? Iure fugit necessitatibus quod
-            voluptates earum, veritatis repudiandae sequi voluptatem minima a
-            deleniti laudantium. Nisi nihil deserunt soluta nesciunt dolorum?
-            Facilis dolorum maiores explicabo omnis quisquam deleniti doloribus
-            reiciendis ducimus delectus quo et, autem quia minus, magni,
-            molestias sint asperiores eius laudantium quaerat sit.
+            Established in 2022 and situated directly across from the <a href="https://www.hrp.org.uk/tower-of-london/#gs.0n9x4s"><u> Tower of London</u></a>, this
+            bespoke, budget friendly Cinematic experience boasts the 
+            largest cinema screens and seating areas in the UK. With 
+            VIP seating , and a menu created by <a href="https://www.gordonramsay.com/"><u>Gordon Ramsay</u></a>, you'd find it 
+            near impossible to find a similar experience anywhere else in 
+            the world.   
           </p>
         </Col>
       </Row>

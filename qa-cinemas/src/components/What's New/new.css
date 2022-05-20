@@ -6,6 +6,8 @@ html,
 }
 
 .poster {
-  height: 40%;
-  width: 30%;
+  margin-bottom: 50px;
+  height: 550px;
+  width: 400px;
+  left: 40px;
 }
