@@ -5,12 +5,13 @@ import Button from "react-bootstrap/Button";
 import Modal from "../Modal/Modal";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
+import './navbar.css'
 
 export default function NavbarComponent() {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
-    <Navbar bg="dark" variant="dark" sticky="true" expand="lg" collapseOnSelect>
+    <Navbar className="navbar" bg="dark" variant="dark" sticky="true" expand="lg" collapseOnSelect>
       <Navbar.Brand>
         <img
           id="logo"
