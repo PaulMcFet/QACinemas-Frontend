@@ -5,13 +5,9 @@ html,
   min-height: 100vh;   
 }
 
-.d-blockposter {
+.poster {
   margin-bottom: 50px;
   height: 550px;
   width: 400px;
   left: 40px;
-}
-
-.info {
-  margin-top: 50px;
 }

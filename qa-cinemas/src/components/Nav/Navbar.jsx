@@ -36,7 +36,7 @@ export default function NavbarComponent() {
               Classifications
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="new">What's New?</Nav.Link>
           <Nav.Link href="listings">Listings</Nav.Link>
           <Nav.Link href="bookings">Bookings</Nav.Link>
