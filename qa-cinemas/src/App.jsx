@@ -10,8 +10,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Listings from "./components/Listings/Listings";
 import About from "./components/About/About";
 import "@stripe/stripe-js";
-import Success from "./components/Bookings/Success"
-import Cancel from "./components/Bookings/Cancel"
+import Success from "./components/Bookings/Success";
+import Cancel from "./components/Bookings/Cancel";
+import Contact from "./components/Contact/Contact";
+import Directions from "./components/Directions/Directions";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Router>
         <Routes>
           <Route
+            index
             path="/"
             element={
               <>
@@ -84,6 +87,26 @@ function App() {
               <>
                 <Navbar />
                 <About />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Navbar />
+                <Contact />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Directions"
+            element={
+              <>
+                <Navbar />
+                <Directions />
                 <Footer />
               </>
             }
