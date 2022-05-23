@@ -29,7 +29,7 @@ export default function NavbarComponent() {
             <NavDropdown.Item href="about">About Us</NavDropdown.Item>
             <NavDropdown.Item href="contact">Contact</NavDropdown.Item>
             <NavDropdown.Item href="directions">Directions</NavDropdown.Item>
-            <NavDropdown.Item href="opening-hours">
+            <NavDropdown.Item href="opening">
               Opening Hours
             </NavDropdown.Item>
             <NavDropdown.Item href="classifications">

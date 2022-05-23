@@ -14,6 +14,7 @@ import Success from "./components/Bookings/Success";
 import Cancel from "./components/Bookings/Cancel";
 import Contact from "./components/Contact/Contact";
 import Directions from "./components/Directions/Directions";
+import Opening from "./components/Opening/Opening";
 
 function App() {
   return (
@@ -107,6 +108,16 @@ function App() {
               <>
                 <Navbar />
                 <Directions />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/opening"
+            element={
+              <>
+                <Navbar />
+                <Opening />
                 <Footer />
               </>
             }
