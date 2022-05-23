@@ -54,12 +54,6 @@ const About = () => {
         <Col>
           <Image fluid rounded src={HQ}></Image>
         </Col>
-        <Col>
-          <h2> Dev Team </h2>
-          <p>
-            A bunch of chill dudes that are just wingin' it.
-          </p>
-        </Col>
       </Row>
     </Container>
   );

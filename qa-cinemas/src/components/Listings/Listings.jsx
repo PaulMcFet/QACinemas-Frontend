@@ -2,12 +2,17 @@ import React from "react";
 import "./listings.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import { NavLink } from "react-router-dom"
+import Bookings from "../Bookings/Bookings";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Strange from "../../Assets/strange.jpg";
 import Six from "../../Assets/6.jpg";
 import Fantastic from "../../Assets/fantastic-beasts.jpg";
 import Jumanji from "../../Assets/jumanji.jpg";
+import Belle from "../../Assets/Belle.jpg"
+import ThorLT from "../../Assets/ThorLT.jpg"
+
 
 
 const Listings = () => {
@@ -19,20 +24,40 @@ const Listings = () => {
       </Row>
       <Row>
         <Col>
-          <Image fluid rounded src={Strange}></Image>
+          <div className="Strange">
+            <NavLink to ="/Bookings" className='Strange'><a href="" className="Strange"><img className= "Strange" src={Strange} alt=""/></a></NavLink>          
           <p>Content</p>
+          </div>
         </Col>
         <Col>
-          <Image fluid rounded src={Six}></Image>
+        <div className="Six">
+            <NavLink to ="/Bookings" className='Six'><a href="" className="Six"><img className= "Six" src={Six} alt=""/></a></NavLink>          
           <p>Content</p>
+          </div>
         </Col>
         <Col>
-          <Image fluid rounded src={Fantastic}></Image>
+        <div className="Fantastic">
+            <NavLink to ="/Bookings" className='Fantastic'><a href="" className="Fantastic"><img className= "Fantastic" src={Fantastic} alt=""/></a></NavLink>          
           <p>Content</p>
+          </div>
         </Col>
         <Col>
-          <Image fluid rounded src={Jumanji}></Image>
+        <div className="Jumanji">
+            <NavLink to ="/Bookings" className='Jumanji'><a href="" className="Jumanji"><img className= "Jumanji" src={Jumanji} alt=""/></a></NavLink>          
           <p>Content</p>
+          </div>
+        </Col>
+        <Col>
+        <div className="ThorLT">
+            <NavLink to ="/Bookings" className='ThorLT'><a href="" className="ThorLT"><img className= "ThorLT" src={ThorLT} alt=""/></a></NavLink>          
+          <p>Content</p>
+          </div>
+        </Col>
+        <Col>
+        <div className="Belle">
+            <NavLink to ="/Bookings" className='Belle'><a href="" className="Belle"><img className= "Belle" src={Belle} alt=""/></a></NavLink>          
+          <p>Content</p>
+          </div>
         </Col>
       </Row>
       <Row>
