@@ -45,44 +45,44 @@ const Listings = () => {
       </Row>
       <Row>
         <Col>
-            <NavLink to="/Bookings" className="Strange">
-                <Image className="Strange" src={Strange} alt="" />
-            </NavLink>
-            <p>Content</p>
+          <NavLink to="/Bookings" className="Strange">
+            <Image className="Strange" src={Strange} alt="" />
+          </NavLink>
+          <p>Content</p>
         </Col>
         <Col>
-            <NavLink to="/Bookings" className="Six">
-                <Image className="Six" src={Six} alt="" />
-            </NavLink>
-            <p>Content</p>
+          <NavLink to="/Bookings" className="Six">
+            <Image className="Six" src={Six} alt="" />
+          </NavLink>
+          <p>Content</p>
         </Col>
         <Col>
-            <NavLink to="/Bookings" className="Fantastic">
-                <Image className="Fantastic" src={Fantastic} alt="" />
-            </NavLink>
-              <ul>
-                {movies.map((m) => (
-                  <li>{m}</li>
-                ))}
-              </ul>
+          <NavLink to="/Bookings" className="Fantastic">
+            <Image className="Fantastic" src={Fantastic} alt="" />
+          </NavLink>
+          <ul>
+            {movies.map((m) => (
+              <li>{m}</li>
+            ))}
+          </ul>
         </Col>
         <Col>
-            <NavLink to="/Bookings" className="Jumanji">
-                <Image className="Jumanji" src={Jumanji} alt="" />
-            </NavLink>
-            <p>Content</p>
+          <NavLink to="/Bookings" className="Jumanji">
+            <Image className="Jumanji" src={Jumanji} alt="" />
+          </NavLink>
+          <p>Content</p>
         </Col>
         <Col>
-            <NavLink to="/Bookings" className="ThorLT">
-                <Image className="ThorLT" src={ThorLT} alt="" />
-            </NavLink>
-            <p>Content</p>
+          <NavLink to="/Bookings" className="ThorLT">
+            <Image className="ThorLT" src={ThorLT} alt="" />
+          </NavLink>
+          <p>Content</p>
         </Col>
         <Col>
-            <NavLink to="/Bookings" className="Belle">
-                <Image className="Belle" src={Belle} alt="" />
-            </NavLink>
-            <p>Content</p>
+          <NavLink to="/Bookings" className="Belle">
+            <Image className="Belle" src={Belle} alt="" />
+          </NavLink>
+          <p>Content</p>
         </Col>
       </Row>
       <Row>
