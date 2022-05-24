@@ -16,16 +16,16 @@ const Home = () => {
         <Col lg>
           <Carousel fade>
             <Carousel.Item interval={5000}>
-              <img className="d-blockposter" src={Scott} alt="First slide" />
+              <img className="d-block poster" src={Scott} alt="First slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <img className="d-blockposter" src={Thor} alt="Second slide" />
+              <img className="d-block poster" src={Thor} alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <img className="d-blockposter" src={Gent} alt="Third slide" />
+              <img className="d-block poster" src={Gent} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
-              <img className="d-blockposter" src={Int} alt="Fourth slide" />
+              <img className="d-block poster" src={Int} alt="Fourth slide" />
             </Carousel.Item>
           </Carousel>
         </Col>

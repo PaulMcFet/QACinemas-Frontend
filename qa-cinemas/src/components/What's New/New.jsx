@@ -32,8 +32,8 @@ const New = () => {
           </Col>
         </Row>
         <Row>
-          <Col className="poster">
-            <img className="poster" src={SPVSTW}/>
+          <Col className="spposter">
+            <img className="spposter" src={SPVSTW}/>
           </Col>
           <Col xs={5}>
             <h1>Scott Pilgrim Vs The World</h1>

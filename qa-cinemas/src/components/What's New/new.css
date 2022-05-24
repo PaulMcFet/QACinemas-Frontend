@@ -6,8 +6,15 @@ html,
 }
 
 .poster {
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   height: 550px;
   width: 400px;
+  left: 40px;
+}
+
+.spposter {
+  margin-bottom: 200px;
+  height: 555px;
+  width: 405px;
   left: 40px;
 }
