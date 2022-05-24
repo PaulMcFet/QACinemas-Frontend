@@ -46,25 +46,19 @@ const Listings = () => {
       <Row>
         <Col>
             <NavLink to="/Bookings" className="Strange">
-              <a href="" className="Strange">
                 <Image className="Strange" src={Strange} alt="" />
-              </a>
             </NavLink>
             <p>Content</p>
         </Col>
         <Col>
             <NavLink to="/Bookings" className="Six">
-              <a href="" className="Six">
                 <Image className="Six" src={Six} alt="" />
-              </a>
             </NavLink>
             <p>Content</p>
         </Col>
         <Col>
             <NavLink to="/Bookings" className="Fantastic">
-              <a href="" className="Fantastic">
                 <Image className="Fantastic" src={Fantastic} alt="" />
-              </a>
             </NavLink>
               <ul>
                 {movies.map((m) => (
@@ -74,17 +68,13 @@ const Listings = () => {
         </Col>
         <Col>
             <NavLink to="/Bookings" className="Jumanji">
-              <a href="" className="Jumanji">
                 <Image className="Jumanji" src={Jumanji} alt="" />
-              </a>
             </NavLink>
             <p>Content</p>
         </Col>
         <Col>
             <NavLink to="/Bookings" className="ThorLT">
-              <a href="" className="ThorLT">
                 <Image className="ThorLT" src={ThorLT} alt="" />
-              </a>
             </NavLink>
             <p>Content</p>
         </Col>
