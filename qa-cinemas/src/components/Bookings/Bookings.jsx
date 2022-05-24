@@ -60,7 +60,7 @@ const Bookings = () => {
     >
       <Row className="text-center">
         <Col>
-          <h1>Bookings</h1>
+          <h1>Booking Your Movie</h1>
         </Col>
       </Row>
       <Row>
@@ -86,28 +86,31 @@ const Bookings = () => {
                     Select a movie
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#">Movie title</Dropdown.Item>
-                    <Dropdown.Item href="#">Movie title</Dropdown.Item>
-                    <Dropdown.Item href="#">Movie title</Dropdown.Item>
+                    <Dropdown.Item href="#">Doctor Strange</Dropdown.Item>
+                    <Dropdown.Item href="#">6 Underground</Dropdown.Item>
+                    <Dropdown.Item href="#">Fantastic Beasts, TSOD</Dropdown.Item>
+                    <Dropdown.Item href="#">Jumanji</Dropdown.Item>
+                    <Dropdown.Item href="#">Thor Love and Thunder</Dropdown.Item>
+                    <Dropdown.Item href="#">Belle</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </Card.Subtitle>
               <Card.Text>
                 <ListGroup>
                   <ListGroup.Item action variant="dark">
-                    Listing time: 12-2pm
+                    Listing time: 10-12pm
                   </ListGroup.Item>
                   <ListGroup.Item action variant="dark">
                     Listing time: 12-2pm
                   </ListGroup.Item>
                   <ListGroup.Item action variant="dark">
-                    Listing time: 12-2pm
+                    Listing time: 2-4pm
                   </ListGroup.Item>
                   <ListGroup.Item action variant="dark">
-                    Listing time: 12-2pm
+                    Listing time: 4-6pm
                   </ListGroup.Item>
                   <ListGroup.Item action variant="dark">
-                    Listing time: 12-2pm
+                    Listing time: 6-8pm
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Text>
