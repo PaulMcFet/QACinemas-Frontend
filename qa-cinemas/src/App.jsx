@@ -14,6 +14,8 @@ import Success from "./components/Bookings/Success";
 import Cancel from "./components/Bookings/Cancel";
 import Contact from "./components/Contact/Contact";
 import Directions from "./components/Directions/Directions";
+import Opening from "./components/Opening/Opening";
+import Classifications from "./components/Classifications/Classifications";
 
 function App() {
   return (
@@ -107,6 +109,26 @@ function App() {
               <>
                 <Navbar />
                 <Directions />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/opening"
+            element={
+              <>
+                <Navbar />
+                <Opening />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/classifications"
+            element={
+              <>
+                <Navbar />
+                <Classifications />
                 <Footer />
               </>
             }
