@@ -14,28 +14,29 @@ import Belle from "../../Assets/Belle.jpg";
 import ThorLT from "../../Assets/ThorLT.jpg";
 
 const Listings = () => {
-
-  const API_URL = 'http://localhost:3000/movie'
+  const API_URL = "http://localhost:3000/movie";
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
         const response = await fetch(API_URL);
+        if (!response.ok) throw Error("Did not receive expected data");
         const listMovies = await response.json();
         console.log(listMovies);
         setMovies(listMovies);
+        setFetchError(null);
       } catch (err) {
-        console.log(err.stack);
+        setFetchError(err.message);
       }
-    }
+    };
 
     (async () => await fetchMovies())();
-
-  }, [])
+  }, []);
 
   const [movies, setMovies] = useState([]);
-  const [newMovie, setNewMovie] = useState('');
-  const [search, setSearch] = useState('');
+  const [newMovie, setNewMovie] = useState("");
+  const [search, setSearch] = useState("");
+  const [fetchError, setFetchError] = useState(null);
 
   return (
     <Container style={{ minHeight: "100vh" }}>
