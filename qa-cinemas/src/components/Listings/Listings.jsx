@@ -45,30 +45,25 @@ const Listings = () => {
       </Row>
       <Row>
         <Col>
-          <div className="Strange">
             <NavLink to="/Bookings" className="Strange">
               <a href="" className="Strange">
-                <img className="Strange" src={Strange} alt="" />
+                <Image className="Strange" src={Strange} alt="" />
               </a>
             </NavLink>
             <p>Content</p>
-          </div>
         </Col>
         <Col>
-          <div className="Six">
             <NavLink to="/Bookings" className="Six">
               <a href="" className="Six">
-                <img className="Six" src={Six} alt="" />
+                <Image className="Six" src={Six} alt="" />
               </a>
             </NavLink>
             <p>Content</p>
-          </div>
         </Col>
         <Col>
-          <div className="Fantastic">
             <NavLink to="/Bookings" className="Fantastic">
               <a href="" className="Fantastic">
-                <img className="Fantastic" src={Fantastic} alt="" />
+                <Image className="Fantastic" src={Fantastic} alt="" />
               </a>
             </NavLink>
               <ul>
@@ -76,37 +71,28 @@ const Listings = () => {
                   <li>{m}</li>
                 ))}
               </ul>
-          </div>
         </Col>
         <Col>
-          <div className="Jumanji">
             <NavLink to="/Bookings" className="Jumanji">
               <a href="" className="Jumanji">
-                <img className="Jumanji" src={Jumanji} alt="" />
+                <Image className="Jumanji" src={Jumanji} alt="" />
               </a>
             </NavLink>
             <p>Content</p>
-          </div>
         </Col>
         <Col>
-          <div className="ThorLT">
             <NavLink to="/Bookings" className="ThorLT">
               <a href="" className="ThorLT">
-                <img className="ThorLT" src={ThorLT} alt="" />
+                <Image className="ThorLT" src={ThorLT} alt="" />
               </a>
             </NavLink>
             <p>Content</p>
-          </div>
         </Col>
         <Col>
-          <div className="Belle">
             <NavLink to="/Bookings" className="Belle">
-              <a href="" className="Belle">
-                <img className="Belle" src={Belle} alt="" />
-              </a>
+                <Image className="Belle" src={Belle} alt="" />
             </NavLink>
             <p>Content</p>
-          </div>
         </Col>
       </Row>
       <Row>
