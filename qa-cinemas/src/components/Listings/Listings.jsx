@@ -71,7 +71,11 @@ const Listings = () => {
                 <img className="Fantastic" src={Fantastic} alt="" />
               </a>
             </NavLink>
-            <p>Content</p>
+              <ul>
+                {movies.map((m) => (
+                  <li>{m}</li>
+                ))}
+              </ul>
           </div>
         </Col>
         <Col>
@@ -106,7 +110,7 @@ const Listings = () => {
         </Col>
       </Row>
       <Row>
-        <Col>1 of 3</Col>
+        <Col></Col>
         <Col>2 of 3</Col>
         <Col>3 of 3</Col>
       </Row>
