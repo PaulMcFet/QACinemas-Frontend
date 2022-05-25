@@ -33,13 +33,13 @@ const Listings = () => {
     return (
       <Col>
         <Card className="m-5" style={{ width: "28rem" }} key={index}>
-          <Card.Img
-            variant="top"
-            src={movies.poster}
-            alt="movie poster"
-          />
+          <Card.Img variant="top" src={movies.poster} alt="movie poster" />
           <Card.Body>
             <Card.Title>{movies.title}</Card.Title>
+            <Card.Text href={movies.link}>{movies.cast}</Card.Text>
+            <Card.Text>{movies.genre}</Card.Text>
+            <Card.Text>{movies.releaseYear}</Card.Text>
+            <Card.Text>{movies.runtime}</Card.Text>
             <Card.Text>{movies.description}</Card.Text>
             <Button href="/Bookings" variant="primary">
               Ticket
@@ -52,7 +52,7 @@ const Listings = () => {
 
   return (
     <Container style={{ minHeight: "100vh" }}>
-      <Row>
+      <Row className="mb-5">
         <h1>Take a look at what's on!</h1>
       </Row>
       <Row>{movies.map(renderCard)}</Row>
