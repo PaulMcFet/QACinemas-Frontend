@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const Listings = () => {
   const API_URL = "http://localhost:3000/movie";
@@ -35,11 +36,15 @@ const Listings = () => {
         <Card className="m-5" style={{ width: "28rem" }} key={index}>
           <Card.Img variant="top" src={movies.poster} alt="movie poster" />
           <Card.Body>
-            <Card.Title>{movies.title}</Card.Title>
-            <Card.Text href={movies.link}>{movies.cast}</Card.Text>
-            <Card.Text>{movies.genre}</Card.Text>
-            <Card.Text>{movies.releaseYear}</Card.Text>
-            <Card.Text>{movies.runtime}</Card.Text>
+            <Card.Title className="fs-2">{movies.title}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              <ListGroup className="lh-1" variant="flush">
+                <ListGroup.Item>Genre: {movies.genre}</ListGroup.Item>
+                <ListGroup.Item>Release-Year: {movies.releaseYear}</ListGroup.Item>
+                <ListGroup.Item>Runtime: {movies.runtime}</ListGroup.Item>
+                <ListGroup.Item href={movies.link}>Cast: {movies.cast}</ListGroup.Item>
+              </ListGroup>
+            </Card.Subtitle>
             <Card.Text>{movies.description}</Card.Text>
             <Button href="/Bookings" variant="primary">
               Ticket
