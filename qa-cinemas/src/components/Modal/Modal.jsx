@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Modal from "react-bootstrap/Modal";
+import ToggleButton from "react-bootstrap/ToggleButton";
+import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 
-const myModal = (props) => {
+const MyModal = (props) => {
+  const [value, setValue] = useState([1]);
+
+  const handleChange = (val) => setValue(val);
+
   return (
     <div>
       <Modal
@@ -15,7 +21,19 @@ const myModal = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Sign in/Register
+            <ToggleButtonGroup
+              size="lg"
+              type="checkbox"
+              value={value}
+              onChange={handleChange}
+            >
+              <ToggleButton id="tbg-btn-1" value={1}>
+                Login
+              </ToggleButton>
+              <ToggleButton id="tbg-btn-2" value={2}>
+                Register
+              </ToggleButton>
+            </ToggleButtonGroup>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -51,4 +69,4 @@ const myModal = (props) => {
   );
 };
 
-export default myModal;
+export default MyModal;
