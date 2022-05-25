@@ -12,6 +12,8 @@ import Fantastic from "../../Assets/fantastic-beasts.jpg";
 import Jumanji from "../../Assets/jumanji.jpg";
 import Belle from "../../Assets/Belle.jpg";
 import ThorLT from "../../Assets/ThorLT.jpg";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const Listings = () => {
   const API_URL = "http://localhost:3000/movie";
@@ -45,9 +47,20 @@ const Listings = () => {
       </Row>
       <Row>
         <Col>
-          <NavLink to="/Bookings" className="Strange">
-            <Image className="Strange" src={Strange} alt="" />
-          </NavLink>
+          <Card style={{ width: "25rem" }}>
+            <Card.Img variant="top" className="Strange" src={Strange} alt="" />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button href="/Bookings" variant="primary">
+                Ticket
+              </Button>
+            </Card.Body>
+          </Card>
+
           <p>Content</p>
         </Col>
         <Col>
@@ -60,9 +73,11 @@ const Listings = () => {
           <NavLink to="/Bookings" className="Fantastic">
             <Image className="Fantastic" src={Fantastic} alt="" />
           </NavLink>
-          <ul>
-          {movies.map(movies => <div>{movies.title}</div>)}
-          </ul>
+          {/* <ul>
+            {movies.map((movies) => (
+              <div>{movies.title}</div>
+            ))}
+          </ul> */}
         </Col>
         <Col>
           <NavLink to="/Bookings" className="Jumanji">
