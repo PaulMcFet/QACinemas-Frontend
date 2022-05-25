@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Nav/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import New from "./components/What's New/New";
@@ -18,6 +18,7 @@ import Opening from "./components/Opening/Opening";
 import Classifications from "./components/Classifications/Classifications";
 
 function App() {
+
   return (
     <div className="App">
       <Router>
