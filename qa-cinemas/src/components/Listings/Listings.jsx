@@ -2,16 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./listings.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import { NavLink } from "react-router-dom";
-import Bookings from "../Bookings/Bookings";
 import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
-import Strange from "../../Assets/strange.jpg";
-import Six from "../../Assets/6.jpg";
-import Fantastic from "../../Assets/fantastic-beasts.jpg";
-import Jumanji from "../../Assets/jumanji.jpg";
-import Belle from "../../Assets/Belle.jpg";
-import ThorLT from "../../Assets/ThorLT.jpg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
@@ -36,73 +27,35 @@ const Listings = () => {
   }, []);
 
   const [movies, setMovies] = useState([]);
-  const [newMovie, setNewMovie] = useState("");
-  const [search, setSearch] = useState("");
   const [fetchError, setFetchError] = useState(null);
+
+  const renderCard = (movies, index) => {
+    return (
+      <Col>
+        <Card className="m-5" style={{ width: "28rem" }} key={index}>
+          <Card.Img
+            variant="top"
+            src={movies.poster}
+            alt="movie poster"
+          />
+          <Card.Body>
+            <Card.Title>{movies.title}</Card.Title>
+            <Card.Text>{movies.description}</Card.Text>
+            <Button href="/Bookings" variant="primary">
+              Ticket
+            </Button>
+          </Card.Body>
+        </Card>
+      </Col>
+    );
+  };
 
   return (
     <Container style={{ minHeight: "100vh" }}>
       <Row>
         <h1>Take a look at what's on!</h1>
       </Row>
-      <Row>
-        <Col>
-          <Card style={{ width: "25rem" }}>
-            <Card.Img variant="top" className="Strange" src={Strange} alt="" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button href="/Bookings" variant="primary">
-                Ticket
-              </Button>
-            </Card.Body>
-          </Card>
-
-          <p>Content</p>
-        </Col>
-        <Col>
-          <NavLink to="/Bookings" className="Six">
-            <Image className="Six" src={Six} alt="" />
-          </NavLink>
-          <p>Content</p>
-        </Col>
-        <Col>
-          <NavLink to="/Bookings" className="Fantastic">
-            <Image className="Fantastic" src={Fantastic} alt="" />
-          </NavLink>
-          {/* <ul>
-            {movies.map((movies) => (
-              <div>{movies.title}</div>
-            ))}
-          </ul> */}
-        </Col>
-        <Col>
-          <NavLink to="/Bookings" className="Jumanji">
-            <Image className="Jumanji" src={Jumanji} alt="" />
-          </NavLink>
-          <p>Content</p>
-        </Col>
-        <Col>
-          <NavLink to="/Bookings" className="ThorLT">
-            <Image className="ThorLT" src={ThorLT} alt="" />
-          </NavLink>
-          <p>Content</p>
-        </Col>
-        <Col>
-          <NavLink to="/Bookings" className="Belle">
-            <Image className="Belle" src={Belle} alt="" />
-          </NavLink>
-          <p>Content</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col></Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
-      </Row>
+      <Row>{movies.map(renderCard)}</Row>
     </Container>
   );
 };
