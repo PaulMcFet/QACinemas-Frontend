@@ -36,7 +36,7 @@ function AppRouter() {
         <Route
           path="/profile"
           element={
-            <SecuredRoute loggedIn={loggedIn}>
+            <SecuredRoute>
               <Profile />
             </SecuredRoute>
           }
