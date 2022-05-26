@@ -6,26 +6,19 @@ import Modal from "../Modal/Modal";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import "./navbar.css";
+import RedirectableRoute from "../RedirectableRoute";
+import JwtManager from "../../utils/JwtManager";
 
-export default function NavbarComponent() {
+export default function NavbarComponent(props) {
   const [modalShow, setModalShow] = React.useState(false);
   const [movies, setMovies] = useState();
   const [search, setSearch] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     setLoading(true);
-
-  //     const data = await fetch(
-  //       `http://localhost:3000/movie/movie=${search}`
-  //     ).then((res) => res.json());
-  //     setMovies(data._embedded.movies)
-  //     setLoading(false);
-  //   }
-
-  //   fetchData()
-  // }, [search]);
+  function logout() {
+    JwtManager.removeToken();
+    props.setLoggedIn(false);
+}
 
   return (
     <Navbar
@@ -75,12 +68,24 @@ export default function NavbarComponent() {
               <Button variant="outline-secondary">Search</Button>
             </Form>
           </Nav.Item>
+          <RedirectableRoute predicate={props.loggedIn} isFalse = {
+            <>
           <Nav.Item className="ms-auto">
             <Button bg="dark" variant="dark" onClick={() => setModalShow(true)}>
               Sign in/Register
             </Button>
             <Modal show={modalShow} onHide={() => setModalShow(false)} />
           </Nav.Item>
+          </>
+          } isTrue={
+            <>
+          <Nav.Item className="ms-auto">
+            <Button bg="dark" variant="dark" onClick={logout}>
+              Sign Out
+            </Button>
+          </Nav.Item>
+          </>
+          } />
         </Nav>
       </Navbar.Collapse>
     </Navbar>
