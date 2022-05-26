@@ -19,7 +19,7 @@ const New = () => {
           </Col>
           <Col xs={5}>
             {" "}
-            <h1>Back To The Future</h1>
+            <h1>Back To The F1uture</h1>
             <p>
             a 1985 American science fiction film directed by <a href="https://www.imdb.com/name/nm0000709/"><u>Robert Zemeckis </u></a>, 
             and written by Zemeckis and Bob Gale. It stars <a href="https://www.imdb.com/name/nm0000150/"><u>Michael J. Fox </u></a>, <a href="https://www.imdb.com/name/nm0000502/"><u>Christopher Lloyd</u></a>, 

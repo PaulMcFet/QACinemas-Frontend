@@ -36,13 +36,7 @@ const Footer = () => {
       <section className="text-center footer-info">
         <section className="footer-info-start">Tel: 07850396398</section>
         <section className="footer-info-center">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis at
-          unde atque est ducimus nam ipsum repellat similique alias et? Cumque
-          dolorem dignissimos magnam facere ullam odit optio tenetur nesciunt!
-          Quam illo doloremque nesciunt itaque repudiandae, accusantium
-          consequuntur asperiores sed fuga odio nisi fugit totam ipsum maiores
-          accusamus sint, nostrum iusto culpa mollitia voluptates doloribus,
-          ducimus modi. Amet, magni mollitia!
+        This Website is a Work In Progress and any content on this site is likely to change over the process of creation. 
         </section>
         <section className="footer-info-end">
           <ul>

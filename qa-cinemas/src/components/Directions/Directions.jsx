@@ -34,8 +34,8 @@ const Directions = () => {
         <Col>
           <Map />
         </Col>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
+        <Col>Located just next to the North side of Tower Bridge.</Col>
+        <Col>Nearest Subway Station is Tower Hill.</Col>
       </Row>
     </Container>
   );
