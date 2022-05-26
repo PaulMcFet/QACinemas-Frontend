@@ -34,8 +34,8 @@ const Directions = () => {
         <Col>
           <Map />
         </Col>
-        <Col>Located just next to the North side of Tower Bridge.</Col>
-        <Col>Nearest Subway Station is Tower Hill.</Col>
+        <Col>Located just next to the North side of Tower Bridge. There is no Parking available on site and we reccomend travelling using public transport.</Col>
+        <Col>The nearest Subway Station is Tower Hill.</Col>
       </Row>
     </Container>
   );
