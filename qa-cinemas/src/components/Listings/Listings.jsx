@@ -1,70 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./listings.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import { NavLink } from "react-router-dom"
-import Bookings from "../Bookings/Bookings";
 import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
-import Strange from "../../Assets/strange.jpg";
-import Six from "../../Assets/6.jpg";
-import Fantastic from "../../Assets/fantastic-beasts.jpg";
-import Jumanji from "../../Assets/jumanji.jpg";
-import Belle from "../../Assets/Belle.jpg"
-import ThorLT from "../../Assets/ThorLT.jpg"
-
-
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const Listings = () => {
+  const API_URL = "http://localhost:3000/movie";
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw Error("Did not receive expected data");
+        const listMovies = await response.json();
+        console.log(listMovies);
+        setMovies(listMovies);
+        setFetchError(null);
+      } catch (err) {
+        setFetchError(err.message);
+      }
+    };
+
+    (async () => await fetchMovies())();
+  }, []);
+
+  const [movies, setMovies] = useState([]);
+  const [fetchError, setFetchError] = useState(null);
+
+  const renderCard = (movies, index) => {
+    return (
+      <Col>
+        <Card className="m-5" style={{ width: "28rem" }} key={index}>
+          <Card.Img variant="top" src={movies.poster} alt="movie poster" />
+          <Card.Body>
+            <Card.Title className="fs-2">{movies.title}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              <ListGroup className="lh-1" variant="flush">
+                <ListGroup.Item>Genre: {movies.genre}</ListGroup.Item>
+                <ListGroup.Item>Release-Year: {movies.releaseYear}</ListGroup.Item>
+                <ListGroup.Item>Runtime: {movies.runtime}</ListGroup.Item>
+                <ListGroup.Item href={movies.link}>Cast: {movies.cast}</ListGroup.Item>
+              </ListGroup>
+            </Card.Subtitle>
+            <Card.Text>{movies.description}</Card.Text>
+            <Button href="/Bookings" variant="primary">
+              Ticket
+            </Button>
+          </Card.Body>
+        </Card>
+      </Col>
+    );
+  };
 
   return (
-    <Container style={{minHeight: "100vh"}}>
-      <Row>
+    <Container style={{ minHeight: "100vh" }}>
+      <Row className="mb-5">
         <h1>Take a look at what's on!</h1>
       </Row>
-      <Row>
-        <Col>
-          <div className="Strange">
-            <NavLink to ="/Bookings" className='Strange'><a href="" className="Strange"><img className= "Strange" src={Strange} alt=""/></a></NavLink>          
-          <p>Content</p>
-          </div>
-        </Col>
-        <Col>
-        <div className="Six">
-            <NavLink to ="/Bookings" className='Six'><a href="" className="Six"><img className= "Six" src={Six} alt=""/></a></NavLink>          
-          <p>Content</p>
-          </div>
-        </Col>
-        <Col>
-        <div className="Fantastic">
-            <NavLink to ="/Bookings" className='Fantastic'><a href="" className="Fantastic"><img className= "Fantastic" src={Fantastic} alt=""/></a></NavLink>          
-          <p>Content</p>
-          </div>
-        </Col>
-        <Col>
-        <div className="Jumanji">
-            <NavLink to ="/Bookings" className='Jumanji'><a href="" className="Jumanji"><img className= "Jumanji" src={Jumanji} alt=""/></a></NavLink>          
-          <p>Content</p>
-          </div>
-        </Col>
-        <Col>
-        <div className="ThorLT">
-            <NavLink to ="/Bookings" className='ThorLT'><a href="" className="ThorLT"><img className= "ThorLT" src={ThorLT} alt=""/></a></NavLink>          
-          <p>Content</p>
-          </div>
-        </Col>
-        <Col>
-        <div className="Belle">
-            <NavLink to ="/Bookings" className='Belle'><a href="" className="Belle"><img className= "Belle" src={Belle} alt=""/></a></NavLink>          
-          <p>Content</p>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col>1 of 3</Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
-      </Row>
+      <Row>{movies.map(renderCard)}</Row>
     </Container>
   );
 };

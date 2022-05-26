@@ -1,10 +1,16 @@
-import React from "react";
-import Form from "react-bootstrap/Form";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Modal from "react-bootstrap/Modal";
+import ToggleButton from "react-bootstrap/ToggleButton";
+import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
+import Login from "./Login";
+import Register from "./Register";
 
-const myModal = (props) => {
+const MyModal = (props) => {
+
+  const [login, setLogin] = useState(true);
+  const [register, setRegister] = useState(false);
+
   return (
     <div>
       <Modal
@@ -15,33 +21,15 @@ const myModal = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Sign in/Register
+            <ToggleButtonGroup size="lg" type="checkbox">
+              <ToggleButton onClick={() => {setLogin(true); setRegister(false)}} id="tbg-btn-1">Login</ToggleButton>
+              <ToggleButton onClick={() => {setLogin(false); setRegister(true)}} id="tbg-btn-2">Register</ToggleButton>
+            </ToggleButtonGroup>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <FloatingLabel
-                controlId="floatingInput"
-                label="Email address"
-                className="mb-3"
-              >
-                <Form.Control type="email" placeholder="name@example.com" />
-              </FloatingLabel>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <FloatingLabel controlId="floatingPassword" label="Password">
-                <Form.Control type="password" placeholder="Password" />
-              </FloatingLabel>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Remember Me" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
+          {login && <Login />}
+          {register && <Register />}
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
@@ -51,4 +39,4 @@ const myModal = (props) => {
   );
 };
 
-export default myModal;
+export default MyModal;
