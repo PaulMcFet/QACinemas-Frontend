@@ -5,7 +5,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Authentication from "../../utils/Authentication";
 import JwtManager from "../../utils/JwtManager";
 
-const Login = ({ setLoggedIn }) => {
+export default function Login({ setLoggedIn }) {
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -70,6 +70,4 @@ const Login = ({ setLoggedIn }) => {
       </Button>
     </Form>
   );
-};
-
-export default Login;
+}
