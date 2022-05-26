@@ -11,9 +11,7 @@ import JwtManager from "../../utils/JwtManager";
 
 export default function NavbarComponent(props) {
   const [modalShow, setModalShow] = React.useState(false);
-  const [movies, setMovies] = useState();
   const [search, setSearch] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   function logout() {
     JwtManager.removeToken();
@@ -74,7 +72,7 @@ export default function NavbarComponent(props) {
             <Button bg="dark" variant="dark" onClick={() => setModalShow(true)}>
               Sign in/Register
             </Button>
-            <Modal show={modalShow} onHide={() => setModalShow(false)} />
+            <Modal setLoggedIn={props.setLoggedIn} show={modalShow} onHide={() => setModalShow(false)} />
           </Nav.Item>
           </>
           } isTrue={

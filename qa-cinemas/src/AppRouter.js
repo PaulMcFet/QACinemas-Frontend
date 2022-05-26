@@ -22,8 +22,8 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
       <Route path='/' element={<App loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}>
-        <Route index path="/" element={<Home />}></Route>
-        <Route path="/new" element={<New />}></Route>
+        <Route index path="/" element={<Home />} />
+        <Route path="/new" element={<New />} />
         <Route path="/listings" element={<Listings />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/success" element={<Success />} />

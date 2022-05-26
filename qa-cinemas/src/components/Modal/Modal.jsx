@@ -7,7 +7,6 @@ import Login from "./Login";
 import Register from "./Register";
 
 const MyModal = (props) => {
-
   const [login, setLogin] = useState(true);
   const [register, setRegister] = useState(false);
 
@@ -22,13 +21,29 @@ const MyModal = (props) => {
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             <ToggleButtonGroup size="lg" type="checkbox">
-              <ToggleButton onClick={() => {setLogin(true); setRegister(false)}} id="tbg-btn-1">Login</ToggleButton>
-              <ToggleButton onClick={() => {setLogin(false); setRegister(true)}} id="tbg-btn-2">Register</ToggleButton>
+              <ToggleButton
+                onClick={() => {
+                  setLogin(true);
+                  setRegister(false);
+                }}
+                id="tbg-btn-1"
+              >
+                Login
+              </ToggleButton>
+              <ToggleButton
+                onClick={() => {
+                  setLogin(false);
+                  setRegister(true);
+                }}
+                id="tbg-btn-2"
+              >
+                Register
+              </ToggleButton>
             </ToggleButtonGroup>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {login && <Login />}
+          {login && <Login setLoggedIn={props.setLoggedIn} />}
           {register && <Register />}
         </Modal.Body>
         <Modal.Footer>
