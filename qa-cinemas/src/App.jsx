@@ -16,8 +16,11 @@ import Contact from "./components/Contact/Contact";
 import Directions from "./components/Directions/Directions";
 import Opening from "./components/Opening/Opening";
 import Classifications from "./components/Classifications/Classifications";
+import Profile from "./components/Profile/Profile";
+import SecuredRoute from "./components/SecuredRoute";
 
-function App() {
+function App(props) {
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div className="App">
@@ -28,7 +31,10 @@ function App() {
             path="/"
             element={
               <>
-                <Navbar />
+                <Navbar
+                  loggedIn={props.loggedIn}
+                  setLoggedIn={props.setLoggedIn}
+                />
                 <Home />
                 <Footer />
               </>
@@ -132,6 +138,18 @@ function App() {
                 <Classifications />
                 <Footer />
               </>
+            }
+          ></Route>
+          <Route
+            path="/profile"
+            element={
+              <SecuredRoute loggedIn={loggedIn}>
+                <>
+                  <Navbar />
+                  <Profile />
+                  <Footer />
+                </>
+              </SecuredRoute>
             }
           ></Route>
         </Routes>
