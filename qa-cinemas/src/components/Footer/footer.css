@@ -1,0 +1,79 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 50px;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(37, 37, 37);
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin: 0rem 3rem 0rem 3rem;
+}
+
+.qa-logo {
+  width: 50px;
+  height: 50px;
+  margin: 0rem 2rem 0rem 2rem;
+}
+
+.git {
+  font-size: xx-large;
+  color: white;
+}
+
+.twitter {
+  font-size: xx-large;
+  color: white;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: rgb(0, 26, 255);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.footer-info-left,
+.footer-info-center {
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin: 0 25px 0 25px;
+}
+
+.footer-info-right {
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: auto;
+  margin-right: 200px;
+}
+
+.footer-info-bottom {
+  font-size: medium;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: auto;
+  justify-content: center;
+  color: white;
+}
