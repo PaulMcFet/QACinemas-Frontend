@@ -40,8 +40,8 @@ const Footer = () => {
         </section>
         <section className="footer-info-end">
           <ul>
-            <li>One</li>
-            <li>Two</li>
+            <li></li>
+            <li></li>
           </ul>
         </section>
       </section>

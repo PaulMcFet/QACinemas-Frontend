@@ -48,7 +48,8 @@ const About = () => {
         <Col>
           <h2> Credits/Inspirations </h2>
           <p>
-          Filler Text
+         We took inspirations from many different sites and technologies to build this page.
+         At the forefront of our minds we wanted it to be User Friendly above all else. 
           </p>
         </Col>
         <Col>
