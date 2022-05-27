@@ -39,7 +39,7 @@ const Contact = () => {
         </Col>
       </Row>
       <Row className="mt-5">
-        <Col>Dev details and links</Col>
+        <Col></Col>
         <Col>
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="Form.ControlInput1">
@@ -88,7 +88,7 @@ const Contact = () => {
             {done && "Thanks for contacting us!"}
           </Form>
         </Col>
-        <Col>Physical contact</Col>
+        <Col></Col>
       </Row>
     </Container>
   );
