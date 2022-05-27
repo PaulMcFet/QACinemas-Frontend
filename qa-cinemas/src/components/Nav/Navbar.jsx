@@ -11,14 +11,28 @@ import JwtManager from "../../utils/JwtManager";
 
 export default function NavbarComponent(props) {
   const [modalShow, setModalShow] = React.useState(false);
-  const [movies, setMovies] = useState();
   const [search, setSearch] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   function logout() {
     JwtManager.removeToken();
     props.setLoggedIn(false);
-}
+  }
+
+  const API_URL = process.env.API_URL;
+
+  // const searchMovies = () => {
+  //   fetch(`${API_URL}/movie?search=${setSearch}`, {
+  //     method: "GET",
+  //   })
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       console.log(response);
+  //       setSearch(response);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
 
   return (
     <Navbar
@@ -63,29 +77,42 @@ export default function NavbarComponent(props) {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
-                onChange={(e) => setSearch(e.target.value)}
+                value={search}
+                // onSubmit={searchMovies}
               />
               <Button variant="outline-secondary">Search</Button>
             </Form>
           </Nav.Item>
-          <RedirectableRoute predicate={props.loggedIn} isFalse = {
-            <>
-          <Nav.Item className="ms-auto">
-            <Button bg="dark" variant="dark" onClick={() => setModalShow(true)}>
-              Sign in/Register
-            </Button>
-            <Modal show={modalShow} onHide={() => setModalShow(false)} />
-          </Nav.Item>
-          </>
-          } isTrue={
-            <>
-          <Nav.Item className="ms-auto">
-            <Button bg="dark" variant="dark" onClick={logout}>
-              Sign Out
-            </Button>
-          </Nav.Item>
-          </>
-          } />
+          <RedirectableRoute
+            predicate={props.loggedIn}
+            isFalse={
+              <>
+                <Nav.Item className="ms-auto">
+                  <Button
+                    bg="dark"
+                    variant="dark"
+                    onClick={() => setModalShow(true)}
+                  >
+                    Sign in/Register
+                  </Button>
+                  <Modal
+                    setLoggedIn={props.setLoggedIn}
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                  />
+                </Nav.Item>
+              </>
+            }
+            isTrue={
+              <>
+                <Nav.Item className="ms-auto">
+                  <Button bg="dark" variant="dark" onClick={logout}>
+                    Sign Out
+                  </Button>
+                </Nav.Item>
+              </>
+            }
+          />
         </Nav>
       </Navbar.Collapse>
     </Navbar>
